@@ -41,5 +41,25 @@
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
 
 
+// const users = [
+//     {id:1,name:"akash",active:'true'},
+//     {id:2,name:"danni",active:'false'},
+//     {id:3,name:"abc",active:"true"}
+//     ]
+    
+// let res = users.filter((ele) => ele.active).map((ele) => ele.name);
+// console.log(res)
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+
+const products = [
+  {name:'A', rating:4.2}, {name:'B', rating:3.1},
+  {name:'C', rating:4.8}, {name:'D', rating:4.5},
+   {name:'E', rating:3.8}, {name:'F', rating:4.9}
+];
+
+const res = products.filter((item) => item.rating >=4).sort((a,b) => b-a).map((item) => item.name)
+console.log(res)
 
 
