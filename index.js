@@ -52,14 +52,31 @@
 
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+// filter, sort, map chaining for products with rating >=4 and sort descending
 
-const products = [
-  {name:'A', rating:4.2}, {name:'B', rating:3.1},
-  {name:'C', rating:4.8}, {name:'D', rating:4.5},
-   {name:'E', rating:3.8}, {name:'F', rating:4.9}
-];
+// const products = [
+//   {name:'A', rating:4.2}, {name:'B', rating:3.1},
+//   {name:'C', rating:4.8}, {name:'D', rating:4.5},
+//    {name:'E', rating:3.8}, {name:'F', rating:4.9}
+// ];
 
-const res = products.filter((item) => item.rating >=4).sort((a,b) => b-a).map((item) => item.name)
-console.log(res)
+// const res = products.filter((item) => item.rating >=4).sort((a,b) => b-a).map((item) => item.name)
+// console.log(res)
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+// 3>   
+let stack = [];
+
+stack.push(1);
+stack.push(2);
+stack.push(3);
+stack.push(4);
+stack.push(5);
+
+stack.pop();
+stack.pop();
+
+console.log(stack);
 
 
