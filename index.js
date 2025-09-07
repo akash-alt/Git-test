@@ -66,17 +66,114 @@
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
 // 3>   
-let stack = [];
+// let stack = [];
 
-stack.push(1);
-stack.push(2);
-stack.push(3);
-stack.push(4);
-stack.push(5);
+// stack.push(1);
+// stack.push(2);
+// stack.push(3);
+// stack.push(4);
+// stack.push(5);
 
-stack.pop();
-stack.pop();
+// stack.pop();
+// stack.pop();
 
-console.log(stack);
+// console.log(stack);
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+// 4>
+
+// console.log("1");
+// setTimeout(() =>{
+//     console.log("2,(macro task)");
+    
+// })
+// Promise.resolve().then(() => {
+//     console.log("3 (micro task)");
+// })
+
+// console.log("4");
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+// 5> async await/promises
+
+// function Wait(){
+//     setTimeout(() => {
+//         console.log('====================================');
+//         console.log("setTimeout after 2 sec");
+//         console.log('====================================');
+//     });
+// }
+
+// async function Wait2(){
+//     console.log("test");
+//     await Wait(1000)
+//     console.log("test2");  
+// }
+// Wait2();
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+// 6> Prototypal inheritance
+
+// let animal = {
+//     eats: true
+// };
+
+// let dog = Object.create(animal);
+// dog.barks = true;
+// console.log(dog.barks);
+
+// 2nd example
+
+// function Person(name){
+//     this.name = name
+// }
+// Person.prototype.greet = function(){
+//     console.log(`Hello, my name is ${this.name}`);
+// }
+
+// let details = new Person("Akash");
+// details.greet();
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+// Wait & log sequence
+
+
+// function wait(ms) {
+//     return new Promise(resolve => setTimeout(resolve,ms))
+// }
+
+// async function run(params) {
+//     console.log("1");
+//     await wait(2000);
+//     console.log("2");
+//     await wait(1000)
+//     console.log("3");
+// }
+// run();
+
+
+// 2nd example
+function fakeApi(){
+    return new Promise((resolve) => {
+        setTimeout(() =>{
+            resolve("data from api")
+        })
+    })
+}
+
+async function run(params){
+    const data = await fakeApi({name:"akash"});
+    console.log(data);
+} 
+run();
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+// 3rd example
+
 
 
